@@ -3,8 +3,8 @@
 PKG             := suitesparse
 $(PKG)_WEBSITE  := http://faculty.cse.tamu.edu/davis/suitesparse.html
 $(PKG)_DESCR    := SuiteSparse
-$(PKG)_VERSION  := 4.5.6
-$(PKG)_CHECKSUM := de5fb496bdc029e55955e05d918a1862a177805fbbd5b957e8b5ce6632f6c77e
+$(PKG)_VERSION  := 5.4.0
+$(PKG)_CHECKSUM := 374dd136696c653e34ef3212dc8ab5b61d9a67a6791d5ec4841efb838e94dbd1
 $(PKG)_SUBDIR   := SuiteSparse
 $(PKG)_FILE     := SuiteSparse-$($(PKG)_VERSION).tar.gz
 $(PKG)_URL      := http://faculty.cse.tamu.edu/davis/SuiteSparse/$($(PKG)_FILE)

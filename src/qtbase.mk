@@ -9,7 +9,7 @@ $(PKG)_CHECKSUM := 533078ce02678988576e224cb3844979907950cf83e0fda3364bc1d5701c9
 $(PKG)_SUBDIR   := $(PKG)-everywhere-src-$($(PKG)_VERSION)
 $(PKG)_FILE     := $(PKG)-everywhere-src-$($(PKG)_VERSION).tar.xz
 $(PKG)_URL      := https://download.qt.io/official_releases/qt/5.12/$($(PKG)_VERSION)/submodules/$($(PKG)_FILE)
-$(PKG)_DEPS     := cc dbus fontconfig freetds freetype harfbuzz jpeg libmysqlclient libpng openssl pcre2 postgresql sqlite zlib
+$(PKG)_DEPS     := cc dbus fontconfig freetds freetype harfbuzz jpeg libmysqlclient libpng openssl1.0 pcre2 sqlite zlib
 $(PKG)_DEPS_$(BUILD) :=
 $(PKG)_TARGETS  := $(BUILD) $(MXE_TARGETS)
 
@@ -52,7 +52,6 @@ define $(PKG)_BUILD
             -mysql_config $(PREFIX)/$(TARGET)/bin/mysql_config \
             -plugin-sql-sqlite \
             -plugin-sql-odbc \
-            -plugin-sql-psql \
             -plugin-sql-tds -D Q_USE_SYBASE \
             -system-zlib \
             -system-libpng \
